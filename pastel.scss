@@ -64,6 +64,7 @@ header{
    height:50px;
    a{
       display:inline-block;
+      float:left;
    }
    .logo{
       display:inline-block;
@@ -86,7 +87,7 @@ main{
       margin:100px 0;
    }
 }
-body:not(.blog) article{
+body:not(.blog):not(.archive) article{
    background-color:$white;
    color:$black;
    text-align:left;

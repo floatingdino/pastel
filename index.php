@@ -7,12 +7,15 @@ get_header();
    <article>
       <a href="<?php the_permalink();?>">
       <div class="preview <?php if (!has_post_thumbnail()) echo "border"; ?>">
+         <?php if(has_post_thumbnail()){?>
          <div class="overlay">
-
+            <?php the_post_thumbnail(); ?>
          </div>
+         <?php }else{ ?>
          <span class="date">
             <?php the_date('M<\b\r><\b>j'); ?></b>
          </span>
+         <?php } ?>
       </div>
       <h1><?php the_title();?></h1>
       </a>
