@@ -5,8 +5,10 @@ get_header();
    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
    <article>
       <section class="sidebar">
-         <?php if(get_field('logo')){ ?>
-            <img class="logo" src="<?php the_field('logo'); ?>">
+         <?php if(get_field('logo')){
+            $logo = get_field('logo')['sizes']['logo'];
+             ?>
+            <img class="logo" src="<?php echo $logo; ?>">
          <?php }else{?>
          <div class="preview">
          </div>

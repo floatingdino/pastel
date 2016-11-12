@@ -3,3 +3,5 @@ node_modules
 .sass_cache/**.
 .*
 !.gitignore
+pastel.css
+pastel.css.map

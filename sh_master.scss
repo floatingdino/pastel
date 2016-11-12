@@ -17,9 +17,10 @@ body, html{min-height:100vh};
 a{color:inherit;}
 body{font-family:$default-sans-stack;}
 
-// MIXINS
 @mixin breakpoint($width){
-   $type : type-of($width);
+// FOUNDATION STYLE BREAKPOINT MIXIN BY SAM
+// INPUT FOUNDATION NAMED BREAKPOINT OR NUMBER FOR PIXEL VALUE MIN WIDTH
+   $type: type-of($width);
    @if $type == string{
       @if map-has-key($breakpoints, $width){
          @media #{inspect(map-get($breakpoints, $width))}{
@@ -30,8 +31,8 @@ body{font-family:$default-sans-stack;}
          @warn "Couldn't find #{$width} in breakpoints, give it a squizz.";
       }
    }
-   @else if $type == number and $width != 0{ //TODO: TEST
-      @media (min-width:$width){
+   @else if $type == number{ // PX ONLY, NO SPECIFIED VALUES
+      @media (min-width: $width + "px"){
          @content;
       }
    }

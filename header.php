@@ -17,5 +17,6 @@ http://samhaakman.com
 <header>
 <a href="/"><img class="logo" src="/wp-content/themes/pastel/samhaakman.svg"></a>
 <?php wp_nav_menu(array('theme_location'=> 'header-menu'));?>
+<div class="clear"></div>
 </header>
 <?php } ?>

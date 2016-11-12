@@ -5,7 +5,10 @@ function theme_supports(){
       add_theme_support('automatic-feed-links');
 }
 add_action('after_setup_theme', 'theme_supports');
-
+function custom_image_sizes(){
+   add_image_size("logo", 290, 600);
+}
+add_action('after_setup_theme', 'custom_image_sizes');
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }

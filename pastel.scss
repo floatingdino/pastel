@@ -61,7 +61,6 @@ body{
 header{
    width:$global-width;
    margin:40px auto;
-   height:50px;
    a{
       display:inline-block;
       float:left;
@@ -87,29 +86,36 @@ main{
       margin:100px 0;
    }
 }
-body:not(.blog):not(.archive) article{
-   background-color:$white;
-   color:$black;
-   text-align:left;
-   padding:50px;
-   position:relative;
-   .preview{
-      background-color:$shpink;
-      color:$white;
+body:not(.blog):not(.archive){
+   article{
+      background-color:$white;
+      color:$black;
+      text-align:left;
+      padding:50px;
       position:relative;
-      padding-bottom:100%;
-   }
-   .sidebar{
-      float:right;
-      width:290px;
-      margin-left:80px;
-      position:relative;
-      margin-bottom:200px;
-   }
-   .button{
-      border-color:$black;
-      width:auto;
-      margin:15px 370px 15px 0;
+      .preview{
+         background-color:$shpink;
+         color:$white;
+         position:relative;
+         padding-bottom:100%;
+      }
+      .sidebar{
+         float:right;
+         width:290px;
+         margin-left:80px;
+         position:relative;
+         margin-bottom:200px;
+         display:none;
+         @include breakpoint(medium){
+            display:block;
+
+         }
+      }
+      .button{
+         border-color:$black;
+         width:auto;
+         margin:15px 370px 15px 0;
+      }
    }
 }
 footer{
