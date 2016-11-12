@@ -1,0 +1,45 @@
+// SAM HAAKMAN DEFAULT SCSS BUILD 002
+// VARIABLES
+$shpink     : #fab2d7;
+$shpurple   : #d1c7f9;
+$shblue     : #98d6e5;
+$black      : black;
+$white      : white;
+$global-width : 1100px;
+$breakpoints: ('small':(min-width:0),'medium':(min-width:640px),'large':(min-width:1024px));
+$default-sans-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// RESETS (PLAIN CSS)
+body, html, div, img, h1, h2, h3, h4, h5, h6, p, a, input, textarea, form, table, tr, td, th, ul, ol, li, header, main, footer, nav, section, article, canvas{max-width:100%; height:auto; box-sizing:border-box; margin:0;padding:0;}
+body, html{min-height:100vh};
+.clear{clear:both;}
+.container{width:$global-width;margin:0 auto;}
+a{color:inherit;}
+body{font-family:$default-sans-stack;}
+
+// MIXINS
+@mixin breakpoint($width){
+   $type : type-of($width);
+   @if $type == string{
+      @if map-has-key($breakpoints, $width){
+         @media #{inspect(map-get($breakpoints, $width))}{
+            @content;
+         }
+      }
+      @else{
+         @warn "Couldn't find #{$width} in breakpoints, give it a squizz.";
+      }
+   }
+   @else if $type == number and $width != 0{ //TODO: TEST
+      @media (min-width:$width){
+         @content;
+      }
+   }
+   @else{
+      @warn "Problem with breakpoint mixin, you tried #{$width}";
+   }
+}
+@mixin sh-gradient(){
+   background: linear-gradient(20deg, rgba(152,214,229,0.8) 0%,rgba(152,214,229,0) 60%),
+               linear-gradient(135deg,  $shpink 0%,$shpurple 100%);
+}

@@ -1,0 +1,57 @@
+.page-template-front{
+   section{
+      width:$global-width;
+      margin-left:auto;margin-right:auto;
+   }
+   .top{
+      min-height:100vh;
+      padding-top:20vh;
+      padding-bottom:300px;
+      position:relative;
+      .logo{
+         width:60%;
+         margin:100px auto 100px auto;
+         display:block;
+      }
+      p{
+         width:400px;
+         margin:0 auto;
+         text-align:center;
+      }
+      .button{
+         position:absolute;
+         bottom:150px;
+         margin:0 auto;
+         left:50%;
+         transform:translateX(-50%);
+      }
+   }
+   nav{
+      text-align:center;
+      margin:80px 0;
+      li{
+         font-size:38px;
+         line-height:65px;
+      }
+   }
+   main{
+      padding-top:40px;
+      text-align:center;
+      h1{
+         font-size:60px;
+         margin:30px 0;
+      }
+      h3{
+         margin:30px 0 60px 0;
+      }
+   }
+   article{
+      margin-bottom:100px;
+   }
+   .studio{
+      width:30.3%;
+      float:left;
+      margin:50px 1.5%;
+      @include bottomhover(-10px, -3px);
+   }
+}

@@ -1,0 +1,36 @@
+body, p h5, h6{
+   font-family:'Lato', sans-serif;
+   font-weight:300;
+   letter-spacing:1px;
+   line-height:1.4;
+}
+h1, h2, h4, .button, .date{
+   font-family:'Montserrat', sans-serif;
+   font-weight:700;
+   letter-spacing:3.5px;
+   text-transform:uppercase;
+}
+
+a{
+   text-decoration: none;
+}
+h1{
+   font-size:40px;
+}
+h2{
+   font-size:35px;
+   margin-bottom:30px;
+}
+h3, .tags{
+   font-family:'Montserrat', sans-serif;
+   font-weight:500;
+   font-size:25px;
+   letter-spacing:2.5px;
+   text-transform:lowercase;
+   line-height:1.4;
+}
+p{
+   font-size:18px;
+   line-height:1.8;
+   margin-bottom:10px;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "pastel",
+  "version": "1.0.0",
+  "description": "Sam's fourth wordpress theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floatingdino/sh.git"
+  },
+  "author": "Sam Haakman",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/floatingdino/sh/issues"
+  },
+  "homepage": "https://github.com/floatingdino/sh#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
