@@ -56,7 +56,7 @@ get_header();
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-<a class="button">Get in touch</a>
+<a class="button" href="/contact">Get in touch</a>
 </main>
 <?php
 get_footer();

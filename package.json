@@ -13,10 +13,11 @@
   "author": "Sam Haakman",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/floatingdino/sh/issues"
+    "url": "https://github.com/floatingdino/pastel/issues"
   },
-  "homepage": "https://github.com/floatingdino/sh#readme",
+  "homepage": "https://github.com/floatingdino/pastel#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
   }
 }
